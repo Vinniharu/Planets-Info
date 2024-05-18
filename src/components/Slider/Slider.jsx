@@ -34,6 +34,7 @@ const Slider = (props) => {
         selectedItem={shownItem}
         showIndicators={false}
         showArrows={false}
+        swipeable={false}
         className="w-[90vw] my-[2rem] md:m-[6rem] mx-auto"
       >
         <div className="flex items-center justify-around flex-wrap md:flex-nowrap gap-[2rem] mx-2">
