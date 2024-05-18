@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import data from "../../../data.json";
 import NavContext from "../../context/nav-context";
+import { BiMenu } from "react-icons/bi";
+import { CgClose } from "react-icons/cg";
+import { CgArrowRight } from "react-icons/cg";
 
 const Navbar = () => {
   const NavToggle = useContext(NavContext);
@@ -9,11 +12,11 @@ const Navbar = () => {
     <nav className="block md:flex items-center justify-between z-10 text-white md:border-b-2 border-[#c4c4c4b6] h-[10vh] relative px-[2rem]">
       <span className="flex items-center justify-between h-[10vh]">
         <h1 className="text-[1.6rem] font-[Antonio]">The Planets</h1>
-        <button className="block md:hidden" onClick={NavToggle.toggleFunction}>
-          <img
-            src={"public/images/icon-hamburger.svg"}
-            className={`w-[1.4rem] ${NavToggle ? "text-white" : "text-[grey]"}`}
-          />
+        <button
+          className="block md:hidden text-2xl"
+          onClick={NavToggle.toggleFunction}
+        >
+          {NavToggle.toggle ? <BiMenu /> : <CgClose />}
         </button>
       </span>
       <ul
@@ -27,13 +30,12 @@ const Navbar = () => {
           <a
             key={index}
             href={`/${planet.name}`}
-            className="flex items-center justify-between w-full px-[0.4rem]"
+            className="flex items-center justify-between w-full ps-[0.4rem] pe-[0.8rem]"
           >
             <p className="m-[1rem] text-xl md:text-base">{planet.name}</p>
-            <img
-              src="public/images/icon-chevron.svg"
-              className="w-[0.8rem] block md:hidden"
-            />
+            <span className="text-2xl block md:hidden">
+              <CgArrowRight />
+            </span>
           </a>
         ))}
       </ul>

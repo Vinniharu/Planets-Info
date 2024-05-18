@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BsLink45Deg } from "react-icons/bs";
 
 const SliderDetails = (props) => {
   const [selected, setSelected] = useState("overview");
@@ -19,7 +20,7 @@ const SliderDetails = (props) => {
   }, [selected]);
 
   return (
-    <div className="flex flex-col md:flex-row justify-center w-[24rem] flex-wrap">
+    <div className="flex flex-col md:flex-row justify-center w-[25rem] flex-wrap">
       <section className="w-full md:text-left">
         <h1 className="text-white md:text-9xl text-3xl font-100 font-[Antonio] mb-[1rem] md:mb-[2rem]">
           {props.title}
@@ -35,8 +36,8 @@ const SliderDetails = (props) => {
               className="flex items-center gap-1 font-bold underline"
             >
               Wikipedia
-              <div className="w-3">
-                <img src="public/images/icon-source.svg" />
+              <div className="w-4">
+                <BsLink45Deg/>
               </div>
             </a>
           </p>

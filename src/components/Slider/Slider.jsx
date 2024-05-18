@@ -35,7 +35,7 @@ const Slider = (props) => {
         showIndicators={false}
         showArrows={false}
         swipeable={false}
-        className="w-[90vw] my-[2rem] md:m-[6rem] mx-auto"
+        className="w-[88vw] my-[1rem] md:m-[6rem] mx-auto"
       >
         <div className="flex items-center justify-around flex-wrap md:flex-nowrap gap-[2rem] mx-2">
           <div className="w-[10rem] md:w-[20rem] flex items-center justify-center">
@@ -74,7 +74,7 @@ const Slider = (props) => {
           />
         </div>
       </Carousel>
-      <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-[1rem] max-w-[65rem] m-auto p-6 md:p-0">
+      <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-[1rem] max-w-[65rem] m-auto p-2">
         <DataReading title="Rotation" data={planet[0]?.rotation} />
         <DataReading title="Revolution" data={planet[0]?.revolution} />
         <DataReading title="Radius" data={planet[0]?.radius} />
